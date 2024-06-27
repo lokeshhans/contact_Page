@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poopins, sans-serif;
+    min-width: 250px;
+}
+body, html{
+    min-height: 100vh;
+    width: 100%;
+    background: #c8e8e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    width: 80%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px 60px 40px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container .contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.contact-form .left{
+    width: 25%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-form .left::before {
+    content: '';
+    position:  absolute;
+    width: 2px;
+    color: red;
+    height: 70%;
+    background: #afafb6;
+    right: -55px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.contact-form .left .detail {
+    margin: 14px;
+    text-align: center;
+}
+.contact-form .left .detail i {
+    font-size: 25px;
+    color: #3e2093;
+}
+.contact-form .left .detail .topic{
+    font-size: 20px;  
+    font-weight: 400; 
+    color: #000000ad;
+}
+.contact-form .left .detail .text-one {
+    font-size: 15px;
+    color: #ada8a8;
+}
+
+.contact-form .left .detail .text-two {
+    font-weight: 300;
+    font-size: 15px;
+    color: #ada8a8;
+    
+}
+
+.contact-form .right{
+    width: 75%;
+    height: 100%;
+    margin-left: 90px;
+}
+.contact-form .right .topic-detail {
+    font-size: 30px;
+    color: #1049b3;
+    margin-top:15px ;
+    
+}
+.contact-form .right  .input-detail {
+    height: 20px;
+    width: 80%;
+    margin: 12px 0;
+}
+.contact-form .right  .input-detail input,
+.contact-form .right  .input-detail textarea {
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid #000000ad;
+    border-radius: 2px;
+    background-color: #e4e4e4;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+.contact-form .right  .message-text {
+    min-height: 110px;
+    resize: none;
+}
+.right .button {
+    width: 80%;
+    text-align: center;
+    display: inline-block;
+}
+.right .button input[type = "button"]{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 400;
+    background-color: rgb(32, 160, 240);
+    border-radius: 50px;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+.right .button input[type = "button"]:hover{
+     background-color: rgba(42, 126, 179, 0.349);
+    
+}
+
+@media (max-width : 950px ) {
+    .container{
+        width: 90%;
+        padding: 30px 35px 35px 30px;
+    }
+}
+@media (max-width : 750px ) {
+    .container{
+        padding: 40px 0px;
+        height: 100%;
+    }
+
+    .container .contact-form {
+        flex-direction: column-reverse;
+    }
+    .contact-form .left{
+        width: 100%;
+        margin-top: 40px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .contact-form .left::before{
+        display: none;
+    }
+
+    .contact-form .right {
+        width: 100%;
+        margin-left: 10px;
+    }
+}
